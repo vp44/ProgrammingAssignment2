@@ -2,6 +2,8 @@
 ## functions do
 
 ## Write a short comment describing this function
+## This function creates a special "Matrix" that enables caching the inverse.
+## Whenever the Matrix is modified the inverse is reset to Null.
 
 makeCacheMatrix <- function(x = matrix()) {
   inverse <- NULL ## Initially the inverse is set to NULL
@@ -19,6 +21,11 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
+## This function takes in the special matrix created by MakeCacheMatrix and returns ...
+## the Inverse
+## If the inverse is already set and returned then it returns the cachedInverse.
+## Otherwise (first time or if matrix was modified) it compute the inverse and ...
+## Cache's it before returning.
 
 cacheSolve <- function(x, ...) {
   inverse <- x$getinverse()
